@@ -1,31 +1,33 @@
 package entityClasses;
-import java.io.*;
-import java.util.*;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AllPassengerData {
-  
-	public static void main(String[] args) {
-	    try {
-	        FileInputStream fileIn = new FileInputStream("passengerData.txt");
-	        ObjectInputStream objectIn = new ObjectInputStream(fileIn);
 
-	        List<Passenger> passengerData = (List<Passenger>) objectIn.readObject();
-	        objectIn.close();
-	        fileIn.close();
+	 public static void getPassengerData() throws FileNotFoundException, IOException, ClassNotFoundException {
 
-	        // Process the passenger data as needed
-	        for (Passenger passenger : passengerData) {
-	            System.out.println(passenger);
+	        File file = new File("passengerData.txt");
+	        List<Passenger> passengerData = new ArrayList<>();
+
+	        if (file.exists()) {
+	            FileInputStream fileIn = new FileInputStream(file);
+	            ObjectInputStream objectIn = new ObjectInputStream(fileIn);
+	            passengerData = (List<Passenger>) objectIn.readObject();
+	            objectIn.close();
+	            fileIn.close();
+
+	            for (Passenger passenger : passengerData) {
+	                System.out.println(passenger);
+	            }
+	        } else {
+	            System.out.println("No passenger data found.");
 	        }
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    } catch (ClassNotFoundException e1) {
-	        e1.printStackTrace();
 	    }
-	}
-
-}
-
 	
-
-
+}
