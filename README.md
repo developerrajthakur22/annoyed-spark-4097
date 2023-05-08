@@ -24,3 +24,19 @@ Java File System database
 # Database Setup
 The bus reservation system uses a File system database to store information about users, buses, reservations, and other system data. 
 
+# Snippet of Project -
+
+# login window-
+![image](https://user-images.githubusercontent.com/121308092/236816652-80cae905-062f-4282-8896-5700ec8521a0.png)
+
+# Passenger booking
+![image](https://user-images.githubusercontent.com/121308092/236816985-d1808a7f-7d2c-4cb4-a2e9-1fbd547834fc.png)
+
+# Seat booked
+![image](https://user-images.githubusercontent.com/121308092/236817483-60107c52-ffb4-4330-913b-d377a74a1893.png)
+
+# Admin login
+![image](https://user-images.githubusercontent.com/121308092/236817693-087e2d12-d4ee-409f-85f1-0bf15b4a07c4.png)
+
+
+
